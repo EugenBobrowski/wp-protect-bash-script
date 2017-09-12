@@ -2,6 +2,11 @@
 
 WP_ROOT=$1
 
+if [ -z "$WP_ROOT" -a "$WP_ROOT"!=" " ]; then
+    echo "WP_ROOT is missing"
+    exit 2
+fi
+
 pgrep exim | xargs kill -9
 
 if [ -f $WP_ROOT'/readme.html' ]; then
