@@ -19,6 +19,9 @@ fi
 if [ ! -f fix-permission.sh ]; then
     wget http://check.dev3.qix.sx/fix-permission.sh
 fi
+if [ ! -f check.sh ]; then
+    wget http://check.dev3.qix.sx/check.sh
+fi
 
 sh ./fix-permission.sh $WP_ROOT
 
@@ -34,10 +37,6 @@ if [ ! -d .git/ ]; then
 
     git add .
     git commit -m 'init' .
-fi
-
-if [ ! -f check.sh ]; then
-    wget http://check.dev3.qix.sx/check.sh
 fi
 
 cd $WP_ROOT
