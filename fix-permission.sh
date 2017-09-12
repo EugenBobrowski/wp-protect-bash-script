@@ -25,9 +25,23 @@ chgrp ${WS_GROUP} ${WP_ROOT}/wp-config.php
 chmod 640 ${WP_ROOT}/wp-config.php
 
 # allow wordpress to manage wp-content
-find ${WP_ROOT}/wp-content/uploads -exec chgrp ${WS_GROUP} {} \;
-find ${WP_ROOT}/wp-content/uploads -type d -exec chmod 775 {} \;
-find ${WP_ROOT}/wp-content/uploads -type f -exec chmod 664 {} \;
-find ${WP_ROOT}/wp-content/logs -exec chgrp ${WS_GROUP} {} \;
-find ${WP_ROOT}/wp-content/logs -type d -exec chmod 775 {} \;
-find ${WP_ROOT}/wp-content/logs -type f -exec chmod 664 {} \;
+find ${WP_ROOT}/wp-content -exec chgrp ${WS_GROUP} {} \;
+find ${WP_ROOT}/wp-content -type d -exec chmod 775 {} \;
+find ${WP_ROOT}/wp-content -type f -exec chmod 664 {} \;
+
+#find ${WP_ROOT}/wp-content/uploads -exec chgrp ${WS_GROUP} {} \;
+#find ${WP_ROOT}/wp-content/uploads -type d -exec chmod 775 {} \;
+#find ${WP_ROOT}/wp-content/uploads -type f -exec chmod 664 {} \;
+#
+#if [ ! -f ${WP_ROOT}/wp-content/updraft ]; then
+#    find ${WP_ROOT}/wp-content/logs -exec chgrp ${WS_GROUP} {} \;
+#    find ${WP_ROOT}/wp-content/logs -type d -exec chmod 775 {} \;
+#    find ${WP_ROOT}/wp-content/logs -type f -exec chmod 664 {} \;
+#fi
+#
+#if [ ! -f ${WP_ROOT}/wp-content/updraft ]; then
+#    find ${WP_ROOT}/wp-content/updraft -exec chgrp ${WS_GROUP} {} \;
+#    find ${WP_ROOT}/wp-content/updraft -type d -exec chmod 775 {} \;
+#    find ${WP_ROOT}/wp-content/updraft -type f -exec chmod 664 {} \;
+#fi
+
