@@ -45,3 +45,4 @@ find ${WP_ROOT}/wp-content -type f -exec chmod 664 {} \;
 #    find ${WP_ROOT}/wp-content/updraft -type f -exec chmod 664 {} \;
 #fi
 
+echo '\nFixing permission in '$WP_ROOT' is done!'
