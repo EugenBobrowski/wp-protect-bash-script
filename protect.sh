@@ -22,6 +22,9 @@ fi
 if [ ! -f check.sh ]; then
     wget http://check.dev3.qix.sx/check.sh
 fi
+if [ ! -f install-wp-cli.sh ]; then
+    wget http://check.dev3.qix.sx/install-wp-cli.sh
+fi
 
 sh ./fix-permission.sh $WP_ROOT
 
