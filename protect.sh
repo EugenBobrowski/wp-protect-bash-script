@@ -39,5 +39,4 @@ if [ ! -d .git/ ]; then
     git commit -m 'init' .
 fi
 
-cd $WP_ROOT
-sh ../check.sh
+sh ./check.sh ${WP_ROOT}
