@@ -55,7 +55,11 @@ grep -R '@serialize' $WP_ROOT/*
 grep -R '@serialize' ${WP_ROOT}/*
 echo "\n============================================\n"
 
-
+#ALPHABET="$(grep -R '$alphabet' ./*)"
+#if [ -z "$ALPHABET" -a "$ALPHABET"!=" " ]; then
+##    echo $ALPHABET
+#    grep -R '$alphabet' ./*
+#fi
 echo "============================================
 grep -R '\$alphabet' $WP_ROOT/*
 --------------------------------------------"
@@ -83,3 +87,12 @@ find ${WP_ROOT}/wp-content/uploads/* -name '*.php'
 find ${WP_ROOT}/wp-content/updraft/* -name '*.php'
 echo "\n============================================\n"
 
+
+
+echo "============================================
+find $WP_ROOT/wp-content/* -name '*.php' -maxdepth 2
+Res: find $WP_ROOT/wp-content/* -name '*.php' -maxdepth 2 ! -name 'index.php' -delete
+--------------------------------------------"
+find ${WP_ROOT}/wp-content/* -name '*.php' -maxdepth 2
+
+echo "\n============================================\n"
