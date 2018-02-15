@@ -90,9 +90,9 @@ echo "\n============================================\n"
 
 
 echo "============================================
-find $WP_ROOT/wp-content/* -name '*.php' -maxdepth 2
-Res: find $WP_ROOT/wp-content/* -name '*.php' -maxdepth 2 ! -name 'index.php' -delete
+find $WP_ROOT/wp-content/* -maxdepth 2 -name '*.php'
+Res: find $WP_ROOT/wp-content/* -maxdepth 2 -name '*.php' ! -name 'index.php' -delete
 --------------------------------------------"
-find ${WP_ROOT}/wp-content/* -name '*.php' -maxdepth 2
+find ${WP_ROOT}/wp-content/* -maxdepth 2 -name '*.php'
 
 echo "\n============================================\n"
