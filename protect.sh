@@ -26,6 +26,9 @@ if [ ! -f install-wp-cli.sh ]; then
     wget http://check.dev3.qix.sx/install-wp-cli.sh
 fi
 
+echo '-------------------------------
+Fix-permission.sh...
+'
 sh ./fix-permission.sh $WP_ROOT
 
 if [ ! -d .git/ ]; then
@@ -36,6 +39,9 @@ if [ ! -d .git/ ]; then
     fi
     if [ -f ${WP_ROOT}/wp-content/updraft ]; then
         echo  $WP_ROOT'wp-content/updraft' >> .gitignore
+    fi
+    if [ -f ${WP_ROOT}/wp-content/cache ]; then
+        echo  $WP_ROOT'wp-content/cache' >> .gitignore
     fi
 
     git add .
