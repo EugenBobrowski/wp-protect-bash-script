@@ -33,15 +33,15 @@ sh ./fix-permission.sh $WP_ROOT
 
 if [ ! -d .git/ ]; then
     git init
-    echo  $WP_ROOT'wp-content/uploads' > .gitignore
+    echo  $WP_ROOT'/wp-content/uploads' > .gitignore
     if [ ! -f .gitignore ]; then
-        echo  $WP_ROOT'wp-content/uploads' > .gitignore
+        echo  $WP_ROOT'/wp-content/uploads' > .gitignore
     fi
     if [ -f ${WP_ROOT}/wp-content/updraft ]; then
-        echo  $WP_ROOT'wp-content/updraft' >> .gitignore
+        echo  $WP_ROOT'/wp-content/updraft' >> .gitignore
     fi
     if [ -f ${WP_ROOT}/wp-content/cache ]; then
-        echo  $WP_ROOT'wp-content/cache' >> .gitignore
+        echo  $WP_ROOT'/wp-content/cache' >> .gitignore
     fi
 
     git add .
